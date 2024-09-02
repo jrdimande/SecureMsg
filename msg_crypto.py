@@ -1,13 +1,16 @@
 import base58
 
 option = input("1. Encode Message\n2. Decode Message\n")
+
 while option != "0":
+    
     if option == "1":
         message = input("Type message: ")
         encoded_message = base58.b58encode(message.encode('utf-8')).decode('utf8')
         print(f"Your message is now encrypted")
         print(f"Message: {encoded_message}")
         option = input("1. Encode Message\n2. Decode Message\n")
+        
     elif option == "2":
         message = input("Type message:  ")
         try:
